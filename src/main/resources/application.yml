@@ -7,8 +7,8 @@ spring:
   application:
     name: bmw-sm
 server:
-#  servlet:
-#    context-path: /sm
+  servlet:
+    context-path: /sm
   port: 20010
 
   
@@ -49,8 +49,8 @@ spring:
   application:
     name: bmw-sm
 server:
-#  servlet:
-#    context-path: /sm
+  servlet:
+    context-path: /sm
   port: 20010
   
 eureka:
