@@ -6,8 +6,8 @@ import java.util.Iterator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClientException;
@@ -37,7 +37,7 @@ public class AppManagementApi {
 	@Autowired
 	private ConsumeAppImpl consumeapp;
 
-	@RequestMapping(value = "/health", method = RequestMethod.GET, produces = "application/json")
+	@GetMapping(value = "/health", produces = "application/json")
 	@ApiOperation(value = "微服务应用状态查询")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "查询成功"), @ApiResponse(code = 400, message = "错误的请求"),
 			@ApiResponse(code = 401, message = "没有权限查看此资源"), @ApiResponse(code = 404, message = "资源不存在"),
